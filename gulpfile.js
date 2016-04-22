@@ -28,6 +28,6 @@ gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
 
-gulp.task('heroku:production', ['build'], function(){
+gulp.task("heroku:production", function(){
   console.log('herokuduction');
 });
