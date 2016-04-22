@@ -52,6 +52,8 @@
     "gulp-util": "3.0.7"
   },
   "scripts": {
+    "build": "gulp",
+    "start": "node app.js",
     "preinstall": "bower install"
   },
   "engines": {
