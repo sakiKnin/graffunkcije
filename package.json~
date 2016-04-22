@@ -53,7 +53,8 @@
   },
   "scripts": {
     "build": "gulp",
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "gulp default",
     "preinstall": "bower install"
   },
   "engines": {
