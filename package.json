@@ -1,11 +1,20 @@
 {
-  "name": "graffunkcije",
+  "name": "gulpangularnew",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "block-stream": "^0.0.9",
+    "char-spinner": "^1.0.1",
+    "chmodr": "^1.0.2",
+    "github-url-from-git": "^1.4.0",
+    "github-url-from-username-repo": "^1.0.2",
+    "lodash._createpadding": "^3.6.1",
+    "lru-cache": "^4.0.1",
+    "minimatch": "^3.0.0",
     "moment": "^2.13.0",
     "selenium-webdriver": "^2.53.1",
+    "spdx": "^0.5.1",
     "try-thread-sleep": "^1.0.0"
   },
   "devDependencies": {},
