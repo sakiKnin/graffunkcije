@@ -34,4 +34,5 @@ gulp.task('heroku:production', ['build'], function(){
   console.log('herokuduction');
 });
 
+gulp.task('webdriver-update', $.protractor.webdriver_update);
  

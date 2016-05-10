@@ -34,6 +34,4 @@ gulp.task('heroku:production', ['build'], function(){
   console.log('herokuduction');
 });
 
-gulp.task('connect', ['some-other-task'], function() {
-    
-});
+ 
