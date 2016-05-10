@@ -24,7 +24,7 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
  *  main optimization build task
  */
 
-gulp.task('heroku', ['build']);
+gulp.task('heroku', 'build');
 
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
