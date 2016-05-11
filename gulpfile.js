@@ -1,6 +1,7 @@
 var gulp = require('gulp')
 var sass = require('gulp-ruby-sass')
 var connect = require('gulp-connect')
+var heroku = require('heroku')
 
 // requires browserify and vinyl-source-stream
 var browserify = require('browserify')

@@ -24,6 +24,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "angular": "^1.5.5"
+    "angular": "^1.5.5",
+    "heroku": "^0.2.0"
   }
 }
