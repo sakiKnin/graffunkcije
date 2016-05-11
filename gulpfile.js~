@@ -1,37 +1,24 @@
-/**
- *  Welcome to your gulpfile!
- *  The gulp tasks are splitted in several files in the gulp directory
- *  because putting all here was really too long
- */
+var gulp = require('gulp')
+var sass = require('gulp-ruby-sass')
+var connect = require('gulp-connect')
 
-'use strict';
+// requires browserify and vinyl-source-stream
+var browserify = require('browserify')
+var source = require('vinyl-source-stream')
 
-var gulp = require('gulp');
-var wrench = require('wrench');
+gulp.task('connect', function () {
+    connect.server({
+        root: 'public',
+        port: 4000
+    })
+})
 
-/**
- *  This will load all js or coffee files in the gulp directory
- *  in order to load all gulp tasks
- */
-wrench.readdirSyncRecursive('./gulp').filter(function(file) {
-  return (/\.(js|coffee)$/i).test(file);
-}).map(function(file) {
-  require('./gulp/' + file);
-});
-
-/**
- *  Default task clean temporaries directories and launch the
- *  main optimization build task
- */
-
-gulp.task('heroku', 'build');
-
-gulp.task('default', ['clean'], function () {
-  gulp.start('build');
-});
-
-gulp.task('heroku:production', ['build'], function(){
-  console.log('herokuduction');
-});
-
- 
+gulp.task('browserify', function() {
+    // Grabs the app.js file
+    return browserify('./app/app.js')
+        // bundles it and creates a file called main.js
+        .bundle()
+        .pipe(source('main.js'))
+        // saves it the public/js/ directory
+        .pipe(gulp.dest('./public/js/'));
+})
