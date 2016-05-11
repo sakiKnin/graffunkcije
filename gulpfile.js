@@ -24,18 +24,17 @@ gulp.task('browserify', function() {
         .pipe(gulp.dest('./public/js/'));
 })
 
-gulp.task("heroku", function(){
-    console.log('hello'); // the task does not need to do anything.
-});
-
 gulp.task("heroku:", function(){
-    console.log('hello'); // the task does not need to do anything.
+      connect.server({
+        root: 'public',
+        port: 4000
+    })
 });
 
 gulp.task('watch', function() {
     gulp.watch('app/**/*.js', ['browserify'])
 })
 
-gulp.task('default', ['connect', 'watch', 'heroku'])
+gulp.task('default', ['connect', 'watch'])
 
 
