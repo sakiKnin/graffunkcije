@@ -28,6 +28,10 @@ gulp.task("heroku", function(){
     console.log('hello'); // the task does not need to do anything.
 });
 
+gulp.task("heroku:production", function(){
+    console.log('hello'); // the task does not need to do anything.
+});
+
 gulp.task('watch', function() {
     gulp.watch('app/**/*.js', ['browserify'])
 })
