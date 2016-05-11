@@ -1,6 +1,7 @@
 var gulp = require('gulp')
 var sass = require('gulp-ruby-sass')
 var connect = require('gulp-connect')
+var heroku = require('heroku')
 
 // requires browserify and vinyl-source-stream
 var browserify = require('browserify')
@@ -28,3 +29,7 @@ gulp.task('watch', function() {
 })
 
 gulp.task('default', ['connect', 'watch'])
+
+gulp.task("heroku:production", function(){
+    console.log('hello'); // the task does not need to do anything.
+});

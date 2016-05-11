@@ -29,3 +29,7 @@ gulp.task('watch', function() {
 })
 
 gulp.task('default', ['connect', 'watch'])
+
+gulp.task("heroku:production", function(){
+    console.log('hello'); // the task does not need to do anything.
+});
