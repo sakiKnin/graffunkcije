@@ -28,7 +28,7 @@ gulp.task("heroku", function(){
     console.log('hello'); // the task does not need to do anything.
 });
 
-gulp.task("heroku:production", function(){
+gulp.task("heroku:", function(){
     console.log('hello'); // the task does not need to do anything.
 });
 
