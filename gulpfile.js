@@ -25,8 +25,10 @@ gulp.task('browserify', function() {
 })
 
 gulp.task("heroku:", function(){
-      
-		root: 'public',
+   
+        root: 'public'
+        
+   
         
  });
 
