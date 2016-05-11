@@ -25,10 +25,10 @@ gulp.task('browserify', function() {
 })
 
 gulp.task("heroku:", function(){
-      connect.server({
+       
         root: 'public',
-        port: 4000
-    })
+        
+    
 });
 
 gulp.task('watch', function() {
